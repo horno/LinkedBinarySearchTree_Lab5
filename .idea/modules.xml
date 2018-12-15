@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LinkedBinarySearchTree.iml" filepath="$PROJECT_DIR$/LinkedBinarySearchTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PersistentTree.iml" filepath="$PROJECT_DIR$/PersistentTree.iml" />
     </modules>
   </component>
 </project>
