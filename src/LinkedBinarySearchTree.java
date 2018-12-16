@@ -52,7 +52,7 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
         return false;
     }
     //*TODO 2 Implement method that given a key returns its node, with that auxiliary method the functions containsKey
-    // and get will be more polite.
+    // and get will be more polite (think of a recursive search)
 
     @Override
     public V get(K key) {
@@ -71,8 +71,7 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
 
     @Override
     public LinkedBinarySearchTree<K, V> put(K key, V value) {
-        LinkedBinarySearchTree<K,V> newTree = new LinkedBinarySearchTree<>(this.comparator,root);
-
+        LinkedBinarySearchTree<K,V> newTree = new LinkedBinarySearchTree<>(this.comparator,recursiveTree(key,value,root));
         return newTree;
     }
     private Node<K,V> recursiveTree(K key, V value, Node<K,V> current){//TODO isEmpty case
@@ -88,7 +87,48 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
         }
 
     @Override
-    public LinkedBinarySearchTree<K, V> remove(K key) { //TODO 1 Implement
-        return null;
+    public LinkedBinarySearchTree<K, V> remove(K key) { //TODO do I really need to pass comparator as parameter?(is global)
+        LinkedBinarySearchTree<K,V> newTree = new LinkedBinarySearchTree<>(comparator,recurRem(key,root));
+        return newTree;
     }
+    private Node<K,V> recurRem(K key, Node<K,V> current){ //TODO 2 first implementation, needs revision
+        if(comparator.compare(current.key,key)>0){
+            return new Node<>(current.key,current.value,recurRem(key,current.left),current.right);
+        }else if(comparator.compare(current.key,key)<0){
+            return new Node<>(current.key,current.value,current.left,recurRem(key,current.right));
+        }else/*if(comparator.compare(current.key,key) == 0)*/{
+            if(current.left == null && current.right == null){
+                return null;
+            }else if(current.left == null && current.right != null){
+                return current.right;
+            }else if(current.left != null && current.right == null){
+                return current.left;
+            }else/*if(current.left != null && current.right != null)*/{
+                Node<K,V> minOfRight = searchMin(current.right);
+                return new Node<>(minOfRight.key,minOfRight.value,current.left,recurRem(minOfRight.key,current.right));
+            }
+        }
+    }
+    private Node<K,V> searchMin(Node<K,V> current){
+        Node<K,V> min = current;
+        while(min.left != null){
+            min = current.left;
+        }
+        return min;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
