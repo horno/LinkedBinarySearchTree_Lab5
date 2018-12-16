@@ -34,11 +34,6 @@ public class LinkedBinarySearchTreeTest {
     @Test
     public void get() {
         LinkedBinarySearchTree<Integer,Integer> tree = new LinkedBinarySearchTree<>(comp);
-        if (tree.get(20) == null){
-            System.out.println("null");
-        }else{
-            System.out.println("ASD");
-        }
         tree = tree.put(20,6);
         int value = tree.get(20);
 

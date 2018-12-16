@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LinkedBinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+            <state relative-caret-position="285">
+              <caret line="79" column="94" lean-forward="true" selection-start-line="79" selection-start-column="94" selection-end-line="79" selection-end-column="94" />
               <folding>
                 <element signature="e#631#632#0" expanded="true" />
                 <element signature="e#682#683#0" expanded="true" />
@@ -26,8 +26,8 @@
                 <element signature="e#906#907#0" expanded="true" />
                 <element signature="e#953#954#0" expanded="true" />
                 <element signature="e#1017#1018#0" expanded="true" />
-                <element signature="e#5046#5047#0" expanded="true" />
-                <element signature="e#5086#5087#0" expanded="true" />
+                <element signature="e#4213#4214#0" expanded="true" />
+                <element signature="e#4253#4254#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/LinkedBinarySearchTreeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+            <state relative-caret-position="135">
+              <caret line="35" column="90" selection-start-line="35" selection-start-column="90" selection-end-line="35" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -80,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="47" />
     <option name="width" value="1346" />
@@ -112,7 +112,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544983283524" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544987477835" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -215,15 +215,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedBinarySearchTreeTest_containsKey - 2018.12.16 at 18h 32m 25s.xml">
-      <configuration name="LinkedBinarySearchTreeTest.containsKey" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedBinarySearchTreeTest_containsKey - 2018.12.16 at 18h 47m 15s.xml">
-      <configuration name="LinkedBinarySearchTreeTest.containsKey" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedBinarySearchTreeTest_containsKey - 2018.12.16 at 18h 50m 04s.xml">
-      <configuration name="LinkedBinarySearchTreeTest.containsKey" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LinkedBinarySearchTreeTest - 2018.12.16 at 18h 50m 18s.xml">
       <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
     </history-entry>
@@ -245,6 +236,15 @@
     <history-entry file="LinkedBinarySearchTreeTest_get - 2018.12.16 at 18h 56m 05s.xml">
       <configuration name="LinkedBinarySearchTreeTest.get" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LinkedBinarySearchTreeTest_get - 2018.12.16 at 18h 59m 09s.xml">
+      <configuration name="LinkedBinarySearchTreeTest.get" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedBinarySearchTreeTest_get - 2018.12.16 at 18h 59m 14s.xml">
+      <configuration name="LinkedBinarySearchTreeTest.get" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedBinarySearchTreeTest_get - 2018.12.16 at 20h 07m 18s.xml">
+      <configuration name="LinkedBinarySearchTreeTest.get" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -256,7 +256,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <frame x="0" y="25" width="1366" height="743" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13560607" />
@@ -269,13 +269,13 @@
       <window_info anchor="bottom" id="Messages" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27198696" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848485" visible="true" weight="0.16612378" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.078175895" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924242" weight="0.078175895" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50151515" side_tool="true" weight="0.27198696" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -311,15 +311,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/LinkedBinarySearchTreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+        <state relative-caret-position="135">
+          <caret line="35" column="90" selection-start-line="35" selection-start-column="90" selection-end-line="35" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedBinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        <state relative-caret-position="285">
+          <caret line="79" column="94" lean-forward="true" selection-start-line="79" selection-start-column="94" selection-end-line="79" selection-end-column="94" />
           <folding>
             <element signature="e#631#632#0" expanded="true" />
             <element signature="e#682#683#0" expanded="true" />
@@ -327,8 +327,8 @@
             <element signature="e#906#907#0" expanded="true" />
             <element signature="e#953#954#0" expanded="true" />
             <element signature="e#1017#1018#0" expanded="true" />
-            <element signature="e#5046#5047#0" expanded="true" />
-            <element signature="e#5086#5087#0" expanded="true" />
+            <element signature="e#4213#4214#0" expanded="true" />
+            <element signature="e#4253#4254#0" expanded="true" />
           </folding>
         </state>
       </provider>

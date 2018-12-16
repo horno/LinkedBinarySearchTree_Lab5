@@ -63,10 +63,15 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
 
     @Override
     public LinkedBinarySearchTree<K, V> put(K key, V value) {
-        return new LinkedBinarySearchTree<>(this.comparator,recursiveTree(key,value,root));
+        if (key == null || value == null){
+            throw new NullPointerException();
+        }else{
+            return new LinkedBinarySearchTree<>(this.comparator,recursiveTree(key,value,root));
+        }
     }
-    private Node<K,V> recursiveTree(K key, V value, Node<K,V> current){//TODO isEmpty case
-        if(current == null){        //Simple case                      //TODO key or value null case
+
+    private Node<K,V> recursiveTree(K key, V value, Node<K,V> current){
+        if(current == null){        //Simple case
             return new Node<>(key,value,null,null);
         }else if(comparator.compare(current.key,key)>0) {
             return new Node<>(current.key,current.value,recursiveTree(key,value,current.left),current.right);
@@ -81,6 +86,7 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
     public LinkedBinarySearchTree<K, V> remove(K key) { //TODO do I really need to pass comparator as parameter?(is global)
         return new LinkedBinarySearchTree<>(comparator,recurRem(key,root));
     }
+
     private Node<K,V> recurRem(K key, Node<K,V> current){ //TODO 2 first implementation, needs revision
         if(comparator.compare(current.key,key)>0){
             return new Node<>(current.key,current.value,recurRem(key,current.left),current.right);
