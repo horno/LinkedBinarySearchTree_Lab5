@@ -97,9 +97,9 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
         }else if(comparator.compare(current.key,key)<0){
             return new Node<>(current.key,current.value,current.left,recurRem(key,current.right));
         }else/*if(comparator.compare(current.key,key) == 0)*/{
-            if(current.left == null && current.right == null){
+            if(current.left == null && current.right == null){  //TODO join conditionals
                 return null;
-            }else if(current.left == null && current.right != null){
+            }else if(current.left == null && current.right != null){    //TODO unnecessary conditionals
                 return current.right;
             }else if(current.left != null && current.right == null){
                 return current.left;
@@ -115,6 +115,22 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
             min = current.left;
         }
         return min;
+    }
+    @Override
+    public String toString(){
+        String string = "";
+        return recurString(string, root);
+    }
+    private String recurString(String string,Node<K,V> current){ //TODO string parameter really useful?
+        if(current.left == null){
+            return "[" + current.key.toString()+
+                    ", "+current.value.toString()+"] ";
+        }else{
+            return string + recurString(string,current.left) + "[" + current.key.toString()+
+                    ", "+current.value.toString()+"] "+ recurString(string,current.right);
+        }
+
+        
     }
 
 }
