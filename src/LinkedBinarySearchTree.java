@@ -31,42 +31,34 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
         this.root = root;
     }
 
-
     @Override
     public boolean isEmpty() {
         return root == null;
     }
 
     @Override
-    public boolean containsKey(K key) { //TODO 2 First attempt
-        Node<K,V> current = root;
-        while(current != null){
-            if(comparator.compare(current.key,key) == 0){
-                return true;
-            }else if(comparator.compare(current.key,key)>0){
-                current = current.left;
-            }else{
-                current = current.left;
-            }
-        }
-        return false;
+    public boolean containsKey(K key) {
+        return searchKey(key,root) != null;
     }
-    //*TODO 2 Implement method that given a key returns its node, with that auxiliary method the functions containsKey
-    // and get will be more polite (think of a recursive search)
 
     @Override
     public V get(K key) {
-        Node<K,V> current = root;
-        while(current != null){
-            if(comparator.compare(current.key,key) == 0){
-                return current.value;
-            }else if(comparator.compare(current.key,key)>0){
-                current = current.left;
-            }else{
-                current = current.right;
-            }
+        Node<K,V> node = searchKey(key,root);
+        if (node == null){
+            return null;
+        }else{
+            return node.value;
         }
-        return null;
+    }
+
+    private Node<K,V> searchKey(K key, Node<K,V> current){
+        if(current == null || comparator.compare(current.key,key) == 0){
+            return current;
+        }else if(comparator.compare(current.key,key) > 0){
+            return searchKey(key,current.left);
+        }else{
+            return searchKey(key,current.right);
+        }
     }
 
     @Override
@@ -87,8 +79,7 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
 
     @Override
     public LinkedBinarySearchTree<K, V> remove(K key) { //TODO do I really need to pass comparator as parameter?(is global)
-        LinkedBinarySearchTree<K,V> newTree = new LinkedBinarySearchTree<>(comparator,recurRem(key,root));
-        return newTree;
+        return new LinkedBinarySearchTree<>(comparator,recurRem(key,root));
     }
     private Node<K,V> recurRem(K key, Node<K,V> current){ //TODO 2 first implementation, needs revision
         if(comparator.compare(current.key,key)>0){
@@ -130,23 +121,3 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
     }
 
 }
-//toString first attempt
-/*if(current.left == null){
-            return "[" + current.key.toString()+
-                    ", "+current.value.toString()+"] ";
-        }else{
-            return string + recurString(string,current.left) + "[" + current.key.toString()+
-                    ", "+current.value.toString()+"] "+ recurString(string,current.right);
-        }*/
-
-
-
-
-
-
-
-
-
-
-
-

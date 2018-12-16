@@ -7,16 +7,43 @@ import static org.junit.Assert.*;
 
 public class LinkedBinarySearchTreeTest {
 
+    private Comparator<Integer> comp  = Comparator.naturalOrder();
+
     @Test
     public void isEmpty() {
+        LinkedBinarySearchTree<Integer,Integer> emptyTree = new LinkedBinarySearchTree<>(comp);
+        assertTrue(emptyTree.isEmpty());
+        emptyTree = emptyTree.put(20,40);
+        assertFalse(emptyTree.isEmpty());
     }
 
     @Test
     public void containsKey() {
+        LinkedBinarySearchTree<Integer,Integer> tree = new LinkedBinarySearchTree<>(comp);
+        tree = tree.put(20,6);
+        tree = tree.put(30,7);
+        tree = tree.put(65,8);
+        tree = tree.put(90,9);
+        tree = tree.put(200,10);
+        tree = tree.put(60,11);
+
+        assertTrue(tree.containsKey(65));
+        assertFalse(tree.containsKey(19));
     }
 
     @Test
     public void get() {
+        LinkedBinarySearchTree<Integer,Integer> tree = new LinkedBinarySearchTree<>(comp);
+        if (tree.get(20) == null){
+            System.out.println("null");
+        }else{
+            System.out.println("ASD");
+        }
+        tree = tree.put(20,6);
+        int value = tree.get(20);
+
+        assertEquals(value,6);
+
     }
 
     @Test
