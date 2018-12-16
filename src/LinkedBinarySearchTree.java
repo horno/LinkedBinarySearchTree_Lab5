@@ -71,8 +71,7 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
 
     @Override
     public LinkedBinarySearchTree<K, V> put(K key, V value) {
-        LinkedBinarySearchTree<K,V> newTree = new LinkedBinarySearchTree<>(this.comparator,recursiveTree(key,value,root));
-        return newTree;
+        return new LinkedBinarySearchTree<>(this.comparator,recursiveTree(key,value,root));
     }
     private Node<K,V> recursiveTree(K key, V value, Node<K,V> current){//TODO isEmpty case
         if(current == null){        //Simple case                      //TODO key or value null case
@@ -80,7 +79,7 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
         }else if(comparator.compare(current.key,key)>0) {
             return new Node<>(current.key,current.value,recursiveTree(key,value,current.left),current.right);
         }else if(comparator.compare(current.key,key)<0){
-            return new Node<>(current.key,current.value,current.left,recursiveTree(key,value,current.left));
+            return new Node<>(current.key,current.value,current.left,recursiveTree(key,value,current.right));
         }else/*if(comparator.compare(current.key,key) == 0)*/{     //TODO this else if could be else, check that
             return new Node<>(current.key,current.value,current.left,current.right);
         }
@@ -116,26 +115,29 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
         }
         return min;
     }
+    //TODO implement hasLeft() and hasRight() (?)
     @Override
     public String toString(){
-        String string = "";
-        return recurString(string, root);
+        return recurString(root);
     }
-    private String recurString(String string,Node<K,V> current){ //TODO string parameter really useful?
-        if(current.left == null){
+    private String recurString(Node<K,V> current){ //TODO string parameter really useful?
+        if(current != null ){
+            return  recurString(current.left) + "[" + current.key.toString()+
+                    ", "+current.value.toString()+"] "+ recurString(current.right);
+        }else{
+            return "";
+        }
+    }
+
+}
+//toString first attempt
+/*if(current.left == null){
             return "[" + current.key.toString()+
                     ", "+current.value.toString()+"] ";
         }else{
             return string + recurString(string,current.left) + "[" + current.key.toString()+
                     ", "+current.value.toString()+"] "+ recurString(string,current.right);
-        }
-
-        
-    }
-
-}
-
-
+        }*/
 
 
 
