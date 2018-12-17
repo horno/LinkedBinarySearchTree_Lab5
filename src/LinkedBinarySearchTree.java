@@ -2,21 +2,21 @@ import java.io.UncheckedIOException;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
+public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>{
 
 
-    private final Node<K,V> root;
+    private final Node<K, V> root;
     private final Comparator<K> comparator;
 
 
-    private static class Node<K,V>{
+    private static class Node<K, V>{
         private final K key;
         private final V value;
-        private final Node<K,V> left;
-        private final Node<K,V> right;
+        private final Node<K, V> left;
+        private final Node<K, V> right;
 
 
-        private Node(K key, V value,Node<K,V> left, Node<K,V> right){
+        private Node(K key, V value, Node<K, V> left, Node<K, V> right){
             this.key = key;
             this.value = value;
             this.left = left;
@@ -26,9 +26,9 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
     }
 
     public LinkedBinarySearchTree(Comparator<K> comparator){
-        this(comparator,null);
+        this(comparator, null);
     }
-    private LinkedBinarySearchTree(Comparator<K> comparator, Node<K,V> root){
+    private LinkedBinarySearchTree(Comparator<K> comparator, Node<K, V> root){
         this.comparator = comparator;
         this.root = root;
     }
@@ -40,12 +40,12 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
 
     @Override
     public boolean containsKey(K key) {
-        return key != null && searchKey(key,root) != null;
+        return key != null && searchKey(key, root) != null;
     }
 
     @Override
     public V get(K key) {
-        Node<K,V> node = searchKey(key,root);
+        Node<K, V> node = searchKey(key, root);
         if (node == null){
             return null;
         }else{
@@ -53,34 +53,34 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
         }
     }
 
-    private Node<K,V> searchKey(K key, Node<K,V> current){
-        if(current == null || comparator.compare(current.key,key) == 0){
+    private Node<K, V> searchKey(K key, Node<K, V> current){
+        if(current == null || comparator.compare(current.key, key) == 0){
             return current;
-        }else if(comparator.compare(current.key,key) > 0){
-            return searchKey(key,current.left);
+        }else if(comparator.compare(current.key, key) > 0){
+            return searchKey(key, current.left);
         }else{
-            return searchKey(key,current.right);
+            return searchKey(key, current.right);
         }
     }
 
     @Override
     public LinkedBinarySearchTree<K, V> put(K key, V value) {
         if (key != null && value != null){
-            return new LinkedBinarySearchTree<>(this.comparator, recurPut(key,value,root));
+            return new LinkedBinarySearchTree<>(this.comparator, recurPut(key, value, root));
         }else{
             throw new NullPointerException();
         }
     }
 
-    private Node<K,V> recurPut(K key, V value, Node<K,V> current){
+    private Node<K, V> recurPut(K key, V value, Node<K, V> current){
         if(current == null){        //Simple case
-            return new Node<>(key,value,null,null);
-        }else if(comparator.compare(current.key,key)>0) {
-            return new Node<>(current.key,current.value, recurPut(key,value,current.left),current.right);
-        }else if(comparator.compare(current.key,key)<0){
-            return new Node<>(current.key,current.value,current.left, recurPut(key,value,current.right));
+            return new Node<>(key, value, null, null);
+        }else if(comparator.compare(current.key, key)>0) {
+            return new Node<>(current.key, current.value, recurPut(key, value, current.left), current.right);
+        }else if(comparator.compare(current.key, key)<0){
+            return new Node<>(current.key, current.value, current.left, recurPut(key, value, current.right));
         }else{
-            return new Node<>(key,value,current.left,current.right);
+            return new Node<>(key, value, current.left, current.right);
         }
     }
 
@@ -88,19 +88,19 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
     public LinkedBinarySearchTree<K, V> remove(K key) {
         if(!containsKey(key)){
             return this;            //TODO clear if is returned this or the new LBST
-//            return new LinkedBinarySearchTree<>(comparator,root);
+//            return new LinkedBinarySearchTree<>(comparator, root);
         }else if(key != null){
-            return new LinkedBinarySearchTree<>(comparator,recurRem(key,root));
+            return new LinkedBinarySearchTree<>(comparator, recurRem(key, root));
         }else{
             throw new NullPointerException();
         }
     }
 
-    private Node<K,V> recurRem(K key, Node<K,V> current){
-        if(comparator.compare(current.key,key)>0){
-            return new Node<>(current.key,current.value,recurRem(key,current.left),current.right);
-        }else if(comparator.compare(current.key,key)<0){
-            return new Node<>(current.key,current.value,current.left,recurRem(key,current.right));
+    private Node<K, V> recurRem(K key, Node<K, V> current){
+        if(comparator.compare(current.key, key)>0){
+            return new Node<>(current.key, current.value, recurRem(key, current.left), current.right);
+        }else if(comparator.compare(current.key, key)<0){
+            return new Node<>(current.key, current.value, current.left, recurRem(key, current.right));
         }else if(!hasLeft(current) && !hasRight(current)){
             return null;
         }else if(!hasLeft(current)){
@@ -108,48 +108,47 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
         }else if(!hasRight(current)){
             return current.left;
         }else{
-            Node<K,V> minOfRight = searchMin(current.right);
-            return new Node<>(minOfRight.key,minOfRight.value,current.left,recurRem(minOfRight.key,current.right));
+            Node<K, V> minOfRight = searchMin(current.right);
+            return new Node<>(minOfRight.key, minOfRight.value, current.left, recurRem(minOfRight.key, current.right));
         }
     }
 
-    private Node<K,V> searchMin(Node<K,V> current){
-        Node<K,V> min = current;
+    private Node<K, V> searchMin(Node<K, V> current){
+        Node<K, V> min = current;
         while(hasLeft(min)){
             min = min.left;
         }
         return min;
     }
 
-    private boolean hasLeft(Node<K,V> node){
+    private boolean hasLeft(Node<K, V> node){
         return node.left != null;
     }
-    private boolean hasRight(Node<K,V> node){
+    private boolean hasRight(Node<K, V> node){
         return node.right != null;
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     public boolean equals(Object o){
         if (o instanceof LinkedBinarySearchTree){
-            LinkedBinarySearchTree<K,V> tree = (LinkedBinarySearchTree<K,V>) o; //TODO unchecked cast
-            return equals(this.root,tree.root);
+            LinkedBinarySearchTree<?, ?> tree = (LinkedBinarySearchTree<?, ?>) o; //TODO unchecked cast
+            return equals(this.root, tree.root);
         }
         return false;
     }
 
-    private boolean equals(Node<K,V> node1, Node<K,V> node2){
+    private boolean equals(Node<K, V> node1, Node<?, ?> node2){
         if (node1 != null && node2 != null){
-            return comparator.compare(node1.key,node2.key) == 0 &&
+            return node1.key.equals(node2.key)   &&
                    node1.value.equals(node2.value) &&
-                   equals(node1.left,node2.left) &&
-                   equals(node1.right,node2.right);
+                   equals(node1.left, node2.left) &&
+                   equals(node1.right, node2.right);
         }else{
             return node1 == null && node2 == null;
         }
     }
 
-    private String recurString(Node<K,V> current){ //TODO string append really inefficient
+    private String recurString(Node<K, V> current){ //TODO string append really inefficient
         if(current != null ){
             return  recurString(current.left) + "[" + current.key.toString()+
                     ", "+current.value.toString()+"] "+ recurString(current.right);
@@ -163,21 +162,3 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
         return recurString(root);
     }
 }
-
-
-
-
-//    @Override
-//    public boolean equals(Object o){
-//        if (o instanceof LinkedBinarySearchTree){ //TODO preguntar això al juanen
-//            LinkedBinarySearchTree<?,?> tree = (LinkedBinarySearchTree<?,?>) o;
-//            return equals(this.root, tree.root);
-//        }else{
-//            return false;
-//        }
-//    }
-//    private boolean equals(Node<K,V> node1, Node<?,?> node2){
-//        if (node1 != null && node2 != null) {
-//            return Objects.equals(node1.key,node2.key);
-//        }
-//    }
