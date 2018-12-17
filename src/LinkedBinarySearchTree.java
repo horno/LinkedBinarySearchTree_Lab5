@@ -86,13 +86,13 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>{
 
     @Override
     public LinkedBinarySearchTree<K, V> remove(K key) {
-        if(!containsKey(key)){
+        if(key == null){
+            throw new NullPointerException();
+        }else if(!containsKey(key)){
             return this;            //TODO clear if is returned this or the new LBST
 //            return new LinkedBinarySearchTree<>(comparator, root);
-        }else if(key != null){
-            return new LinkedBinarySearchTree<>(comparator, recurRem(key, root));
         }else{
-            throw new NullPointerException();
+            return new LinkedBinarySearchTree<>(comparator, recurRem(key, root));
         }
     }
 

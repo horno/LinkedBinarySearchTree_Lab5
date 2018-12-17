@@ -158,6 +158,11 @@ public class LinkedBinarySearchTreeTest {
         newTree = newTree.remove(50);
         assertTrue(newTree.isEmpty());
     }
+    @Test(expected = NullPointerException.class)
+    public void removeNull(){
+        LinkedBinarySearchTree<Integer,Integer> tree = new LinkedBinarySearchTree<>(comp);
+        tree.remove(null);
+    }
 
     @Test
     public void toStringTest(){
