@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
 import javax.naming.InsufficientResourcesException;
 import java.util.Comparator;
@@ -73,18 +74,26 @@ public class LinkedBinarySearchTreeTest {
     public void remove2() {
         Comparator<Integer> comp = Comparator.naturalOrder();
         LinkedBinarySearchTree<Integer, Integer> newTree = new LinkedBinarySearchTree<>(comp);
-        newTree = newTree.put(50,1);
+        LinkedBinarySearchTree<Integer, Integer> toRemoveTree = new LinkedBinarySearchTree<>(comp);
+
+        newTree = newTree.put(52,1);
         newTree = newTree.put(40,2);
         newTree = newTree.put(70,3);
         newTree = newTree.put(60,4);
         newTree = newTree.put(80,5);
 
+        toRemoveTree = newTree.remove(50);
+
+        assertEquals(newTree.toString(),toRemoveTree.toString()); //TODO override equals and fix this
+    }
+    @Test
+    public void removeEmpty() {
+        Comparator<Integer> comp = Comparator.naturalOrder();
+        LinkedBinarySearchTree<Integer, Integer> newTree = new LinkedBinarySearchTree<>(comp);
         newTree = newTree.remove(50);
 
-        if(newTree.isEmpty()){
-            System.out.println("Empty tree");
-        }else System.out.println(newTree.toString());
     }
+
     @Test
     public void toStringTest(){
         Comparator<Integer> comp = Comparator.naturalOrder();

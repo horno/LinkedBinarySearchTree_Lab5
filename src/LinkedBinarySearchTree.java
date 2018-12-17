@@ -63,61 +63,74 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
 
     @Override
     public LinkedBinarySearchTree<K, V> put(K key, V value) {
-        if (key == null || value == null){
-            throw new NullPointerException();
+        if (key != null && value != null){
+            return new LinkedBinarySearchTree<>(this.comparator, recurPut(key,value,root));
         }else{
-            return new LinkedBinarySearchTree<>(this.comparator,recursiveTree(key,value,root));
+            throw new NullPointerException();
         }
     }
 
-    private Node<K,V> recursiveTree(K key, V value, Node<K,V> current){
+    private Node<K,V> recurPut(K key, V value, Node<K,V> current){
         if(current == null){        //Simple case
             return new Node<>(key,value,null,null);
         }else if(comparator.compare(current.key,key)>0) {
-            return new Node<>(current.key,current.value,recursiveTree(key,value,current.left),current.right);
+            return new Node<>(current.key,current.value, recurPut(key,value,current.left),current.right);
         }else if(comparator.compare(current.key,key)<0){
-            return new Node<>(current.key,current.value,current.left,recursiveTree(key,value,current.right));
-        }else/*if(comparator.compare(current.key,key) == 0)*/{     //TODO this else if could be else, check that
-            return new Node<>(current.key,current.value,current.left,current.right);
+            return new Node<>(current.key,current.value,current.left, recurPut(key,value,current.right));
+        }else{
+            return new Node<>(key,value,current.left,current.right);
         }
-        }
-
-    @Override
-    public LinkedBinarySearchTree<K, V> remove(K key) { //TODO do I really need to pass comparator as parameter?(is global)
-        return new LinkedBinarySearchTree<>(comparator,recurRem(key,root));
     }
 
-    private Node<K,V> recurRem(K key, Node<K,V> current){ //TODO 2 first implementation, needs revision
+    @Override
+    public LinkedBinarySearchTree<K, V> remove(K key) {
+        if(!containsKey(key)){
+            return this;            //TODO clear if is returned this or the new LBST
+//            return new LinkedBinarySearchTree<>(comparator,root);
+        }else if(key != null){
+            return new LinkedBinarySearchTree<>(comparator,recurRem(key,root));
+        }else{
+            throw new NullPointerException();
+        }
+    }
+
+    private Node<K,V> recurRem(K key, Node<K,V> current){
         if(comparator.compare(current.key,key)>0){
             return new Node<>(current.key,current.value,recurRem(key,current.left),current.right);
         }else if(comparator.compare(current.key,key)<0){
             return new Node<>(current.key,current.value,current.left,recurRem(key,current.right));
-        }else/*if(comparator.compare(current.key,key) == 0)*/{
-            if(current.left == null && current.right == null){  //TODO join conditionals
-                return null;
-            }else if(current.left == null && current.right != null){    //TODO unnecessary conditionals
-                return current.right;
-            }else if(current.left != null && current.right == null){
-                return current.left;
-            }else/*if(current.left != null && current.right != null)*/{
-                Node<K,V> minOfRight = searchMin(current.right);
-                return new Node<>(minOfRight.key,minOfRight.value,current.left,recurRem(minOfRight.key,current.right));
-            }
+        }else if(!hasLeft(current) && !hasRight(current)){
+            return null;
+        }else if(!hasLeft(current)){
+            return current.right;
+        }else if(!hasRight(current)){
+            return current.left;
+        }else{
+            Node<K,V> minOfRight = searchMin(current.right);
+            return new Node<>(minOfRight.key,minOfRight.value,current.left,recurRem(minOfRight.key,current.right));
         }
     }
+
     private Node<K,V> searchMin(Node<K,V> current){
         Node<K,V> min = current;
-        while(min.left != null){
-            min = current.left;
+        while(hasLeft(min)){
+            min = min.left;
         }
         return min;
     }
-    //TODO implement hasLeft() and hasRight() (?)
+
+    private boolean hasLeft(Node<K,V> node){
+        return node.left != null;
+    }
+    private boolean hasRight(Node<K,V> node){
+        return node.right != null;
+    }
+
     @Override
     public String toString(){
         return recurString(root);
     }
-    private String recurString(Node<K,V> current){ //TODO string parameter really useful?
+    private String recurString(Node<K,V> current){ //TODO string append really inefficient
         if(current != null ){
             return  recurString(current.left) + "[" + current.key.toString()+
                     ", "+current.value.toString()+"] "+ recurString(current.right);
