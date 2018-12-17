@@ -1,4 +1,6 @@
+import java.io.UncheckedIOException;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
 
@@ -38,7 +40,7 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
 
     @Override
     public boolean containsKey(K key) {
-        return searchKey(key,root) != null;
+        return key != null && searchKey(key,root) != null;
     }
 
     @Override
@@ -126,10 +128,27 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
         return node.right != null;
     }
 
+    @SuppressWarnings("unchecked")
     @Override
-    public String toString(){
-        return recurString(root);
+    public boolean equals(Object o){
+        if (o instanceof LinkedBinarySearchTree){
+            LinkedBinarySearchTree<K,V> tree = (LinkedBinarySearchTree<K,V>) o; //TODO unchecked cast
+            return equals(this.root,tree.root);
+        }
+        return false;
     }
+
+    private boolean equals(Node<K,V> node1, Node<K,V> node2){
+        if (node1 != null && node2 != null){
+            return comparator.compare(node1.key,node2.key) == 0 &&
+                   node1.value.equals(node2.value) &&
+                   equals(node1.left,node2.left) &&
+                   equals(node1.right,node2.right);
+        }else{
+            return node1 == null && node2 == null;
+        }
+    }
+
     private String recurString(Node<K,V> current){ //TODO string append really inefficient
         if(current != null ){
             return  recurString(current.left) + "[" + current.key.toString()+
@@ -139,4 +158,26 @@ public class LinkedBinarySearchTree<K,V> implements BinarySearchTree<K,V>{
         }
     }
 
+        @Override
+    public String toString(){
+        return recurString(root);
+    }
 }
+
+
+
+
+//    @Override
+//    public boolean equals(Object o){
+//        if (o instanceof LinkedBinarySearchTree){ //TODO preguntar això al juanen
+//            LinkedBinarySearchTree<?,?> tree = (LinkedBinarySearchTree<?,?>) o;
+//            return equals(this.root, tree.root);
+//        }else{
+//            return false;
+//        }
+//    }
+//    private boolean equals(Node<K,V> node1, Node<?,?> node2){
+//        if (node1 != null && node2 != null) {
+//            return Objects.equals(node1.key,node2.key);
+//        }
+//    }
