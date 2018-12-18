@@ -126,11 +126,16 @@ public class LinkedBinarySearchTreeTest {
         newTree = newTree.put(25, 2);
         newTree = newTree.put(75, 3);
         newTree = newTree.put(13, 4);
+        newTree = newTree.put(90, 7);
+        newTree = newTree.put(99, 9);
+
 
         assertFalse(newTree.isEmpty());
 
-        newTree = newTree.remove(25);
         newTree = newTree.remove(50);
+        newTree = newTree.remove(99);
+        newTree = newTree.remove(90);
+        newTree = newTree.remove(25);
         newTree = newTree.remove(13);
         newTree = newTree.remove(75);
 
@@ -231,6 +236,13 @@ public class LinkedBinarySearchTreeTest {
         emptyTree2 = emptyTree2.put(59, 3);
 
         assertEquals(emptyTree1, emptyTree2);
+    }    @Test
+    public void equalsDifferentType(){
+        Comparator<Integer> comp = Comparator.naturalOrder();
+        LinkedBinarySearchTree<Integer, Integer> tree = new LinkedBinarySearchTree<>(comp);
+        Integer integer = 6;
+
+        assertNotEquals(tree,integer);
     }
 }
 
