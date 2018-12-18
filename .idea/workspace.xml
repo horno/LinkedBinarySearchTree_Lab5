@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3ea1a5c-977b-4fef-add1-4336d598cbfb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersistentTree.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PersistentTree.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/LinkedBinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LinkedBinarySearchTreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedBinarySearchTree.java" afterDir="false" />
-    </list>
+    <list default="true" id="b3ea1a5c-977b-4fef-add1-4336d598cbfb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +10,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PersistentTree_Lab5$LinkedBinarySearchTreeTest.ic" NAME="LinkedBinarySearchTreeTest Coverage Results" MODIFIED="1545131712742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/PersistentTree_Lab5$LinkedBinarySearchTreeTest.ic" NAME="LinkedBinarySearchTreeTest Coverage Results" MODIFIED="1545132083908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/PersistentTree$LinkedBinarySearchTreeTest.ic" NAME="LinkedBinarySearchTreeTest Coverage Results" MODIFIED="1545061096703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="212" />
+    <option name="myElementSize" value="221" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="PersistentTree" />
@@ -30,7 +24,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedBinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1073">
+            <state relative-caret-position="-1505">
               <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#703#704#0" expanded="true" />
@@ -51,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/LinkedBinarySearchTreeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+            <state relative-caret-position="433">
+              <caret line="244" column="24" selection-start-line="244" selection-start-column="24" selection-end-line="244" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,7 +138,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545131711672" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545132081648" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -254,9 +248,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedBinarySearchTreeTest - 2018.12.17 at 16h 29m 54s.xml">
-      <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LinkedBinarySearchTreeTest - 2018.12.17 at 16h 30m 17s.xml">
       <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
     </history-entry>
@@ -282,6 +273,9 @@
       <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LinkedBinarySearchTreeTest - 2018.12.18 at 12h 12m 57s.xml">
+      <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedBinarySearchTreeTest - 2018.12.18 at 12h 15m 15s.xml">
       <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -342,7 +336,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedBinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1073">
+        <state relative-caret-position="-1505">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="e#703#704#0" expanded="true" />
@@ -361,8 +355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/LinkedBinarySearchTreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+        <state relative-caret-position="433">
+          <caret line="244" column="24" selection-start-line="244" selection-start-column="24" selection-end-line="244" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -127,14 +127,16 @@ public class LinkedBinarySearchTreeTest {
         newTree = newTree.put(75, 3);
         newTree = newTree.put(13, 4);
         newTree = newTree.put(90, 7);
-        newTree = newTree.put(99, 9);
+        newTree = newTree.put(65, 9);
+        newTree = newTree.put(99, 8);
 
 
         assertFalse(newTree.isEmpty());
 
         newTree = newTree.remove(50);
-        newTree = newTree.remove(99);
         newTree = newTree.remove(90);
+        newTree = newTree.remove(99);
+        newTree = newTree.remove(65);
         newTree = newTree.remove(25);
         newTree = newTree.remove(13);
         newTree = newTree.remove(75);
