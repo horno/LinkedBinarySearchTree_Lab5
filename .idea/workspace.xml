@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3ea1a5c-977b-4fef-add1-4336d598cbfb" name="Default Changelist" comment="" />
+    <list default="true" id="b3ea1a5c-977b-4fef-add1-4336d598cbfb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersistentTree.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PersistentTree.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,22 +15,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PersistentTree_Lab5$LinkedBinarySearchTreeTest.ic" NAME="LinkedBinarySearchTreeTest Coverage Results" MODIFIED="1545132083908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/PersistentTree_Lab5$LinkedBinarySearchTreeTest.ic" NAME="LinkedBinarySearchTreeTest Coverage Results" MODIFIED="1545132550556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/PersistentTree$LinkedBinarySearchTreeTest.ic" NAME="LinkedBinarySearchTreeTest Coverage Results" MODIFIED="1545061096703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="221" />
+    <option name="myElementSize" value="240" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="PersistentTree" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LinkedBinarySearchTree.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1505">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="90">
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
               <folding>
                 <element signature="e#703#704#0" expanded="true" />
                 <element signature="e#741#742#0" expanded="true" />
@@ -42,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/LinkedBinarySearchTreeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="244" column="24" selection-start-line="244" selection-start-column="24" selection-end-line="244" selection-end-column="24" />
+            <state relative-caret-position="2055">
+              <caret line="137" column="35" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,10 +60,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BinarySearchTree.java">
+        <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/BinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="40" selection-start-column="40" selection-end-column="40" />
+              <caret column="17" selection-start-column="17" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -96,16 +101,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/BinarySearchTree.java" />
-        <option value="$PROJECT_DIR$/src/LinkedBinarySearchTree.java" />
         <option value="$PROJECT_DIR$/Tests/LinkedBinarySearchTreeTest.java" />
+        <option value="$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" />
+        <option value="$PROJECT_DIR$/src/LinkedBinarySearchTree.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="152" />
-    <option name="y" value="50" />
-    <option name="width" value="1575" />
-    <option name="height" value="874" />
+    <option name="x" value="102" />
+    <option name="y" value="35" />
+    <option name="width" value="1726" />
+    <option name="height" value="950" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -123,7 +129,7 @@
             <path>
               <item name="PersistentTree_Lab5" type="b2602c69:ProjectViewProjectNode" />
               <item name="PersistentTree_Lab5" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -138,7 +144,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545132081648" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545132541659" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -150,6 +156,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -248,18 +257,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedBinarySearchTreeTest - 2018.12.17 at 16h 30m 17s.xml">
-      <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedBinarySearchTreeTest - 2018.12.17 at 16h 31m 34s.xml">
-      <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedBinarySearchTreeTest - 2018.12.17 at 16h 32m 51s.xml">
-      <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedBinarySearchTreeTest - 2018.12.17 at 16h 33m 08s.xml">
-      <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LinkedBinarySearchTreeTest - 2018.12.17 at 16h 38m 17s.xml">
       <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
     </history-entry>
@@ -278,6 +275,18 @@
     <history-entry file="LinkedBinarySearchTreeTest - 2018.12.18 at 12h 15m 15s.xml">
       <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LinkedBinarySearchTreeTest - 2018.12.18 at 12h 20m 06s.xml">
+      <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedBinarySearchTreeTest - 2018.12.18 at 12h 20m 42s.xml">
+      <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedBinarySearchTreeTest - 2018.12.18 at 12h 21m 26s.xml">
+      <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedBinarySearchTreeTest - 2018.12.18 at 12h 29m 13s.xml">
+      <configuration name="LinkedBinarySearchTreeTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -289,10 +298,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="152" y="50" width="1575" height="874" extended-state="0" />
-    <editor active="true" />
+    <frame x="102" y="35" width="1726" height="950" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49908257" visible="true" weight="0.116764516" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49908257" visible="true" weight="0.19477434" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -301,8 +309,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.50091743" side_tool="true" weight="0.13560607" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49924242" weight="0.3275862" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49772727" visible="true" weight="0.08056266" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32867134" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49772727" visible="true" weight="0.13869464" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -318,7 +326,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info active="true" anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.32941943" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.30463183" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -327,17 +335,27 @@
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/src.zip!/java/util/Objects.java" />
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/src.zip!/java/lang/Object.java" />
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/src.zip!/java/lang/String.java" />
-    <entry file="file://$PROJECT_DIR$/src/BinarySearchTree.java">
+    <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="40" selection-start-column="40" selection-end-column="40" />
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedBinarySearchTree.java">
+    <entry file="file://$PROJECT_DIR$/Tests/LinkedBinarySearchTreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1505">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="2055">
+          <caret line="137" column="35" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
             <element signature="e#703#704#0" expanded="true" />
             <element signature="e#741#742#0" expanded="true" />
@@ -349,16 +367,6 @@
             <element signature="e#4086#4087#0" expanded="true" />
             <element signature="e#4133#4134#0" expanded="true" />
             <element signature="e#4174#4175#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/LinkedBinarySearchTreeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="244" column="24" selection-start-line="244" selection-start-column="24" selection-end-line="244" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -403,7 +411,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
