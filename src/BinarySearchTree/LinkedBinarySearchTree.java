@@ -172,18 +172,18 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
         }
     }
 
-    private void recurString2(Node<K, V> current, StringBuilder sb){ //TODO decide if string is global
-        if(current != null ){
-             recurString2(current.left,sb);
-             sb.append("[").append(current.key.toString()).append(", ").append(current.value.toString()).append("] ");
-             recurString2(current.right,sb);
-        }
-    }
-
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        recurString2(root,sb);
+        recurString(root,sb);
         return sb.toString();
+    }
+
+    private void recurString(Node<K, V> current, StringBuilder sb){
+        if(current != null ){
+             recurString(current.left,sb);
+             sb.append("[").append(current.key.toString()).append(", ").append(current.value.toString()).append("] ");
+             recurString(current.right,sb);
+        }
     }
 }

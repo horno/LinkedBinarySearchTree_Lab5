@@ -203,7 +203,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545223632381" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545224705797" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -244,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedBinarySearchTreeTest">
+  <component name="RunManager" selected="JUnit.LinkedStackTest">
     <configuration name="LinkedBinarySearchTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PersistentTree" />
       <option name="PACKAGE_NAME" value="" />
@@ -293,8 +293,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LinkedBinarySearchTreeTest" />
         <item itemvalue="JUnit.LinkedStackTest" />
+        <item itemvalue="JUnit.LinkedBinarySearchTreeTest" />
         <item itemvalue="JUnit.LinkedStackTest.topEmpty" />
         <item itemvalue="JUnit.LinkedBinarySearchTreeTest.get" />
         <item itemvalue="JUnit.LinkedBinarySearchTreeTest.containsKey" />
