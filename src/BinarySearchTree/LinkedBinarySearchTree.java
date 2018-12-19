@@ -1,11 +1,52 @@
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 
-public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, BinaryTree<Pair<K,V>>{
+public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, BinaryTree<Pair<K,V>>, Iterable<Pair<K,V>>{
 
 
     private final Node<K, V> root;
     private final Comparator<K> comparator;
-    
+
+    @Override
+    public Iterator<Pair<K, V>> iterator() {
+        return new LBSTIterator();
+    }
+
+    private class LBSTIterator implements Iterator<Pair<K,V>>{
+
+
+
+        @Override
+        public boolean hasNext() {
+            return false;
+        }
+
+        @Override
+        public Pair<K, V> next() {
+                LinkedStack<LinkedBinarySearchTree<K, V>> stack = new LinkedStack<>();
+                LinkedBinarySearchTree<K,V> current = LinkedBinarySearchTree.this;
+
+                stackLeft(current,stack);
+
+                while (!stack.isEmpty()){
+                    current = stack.top();
+                    array.add(current.root());
+                    stack.pop();
+                    current = current.right();
+                    stackLeft(current,stack);
+                }
+
+                return array;
+        }
+        private  <K,V> void stackLeft(LinkedBinarySearchTree<K,V> current,LinkedStack<LinkedBinarySearchTree<K,V>> stack) {
+            while(!current.isEmpty()){
+                stack.push(current);
+                current = current.left();
+            }
+        }
+    }
+
     private static class Node<K, V>{
         private final K key;
         private final V value;
@@ -113,8 +154,7 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
         if(key == null){
             throw new NullPointerException();
         }else if(!containsKey(key)){
-            return this;            //TODO clear if is returned this or the new LBST
-//            return new LinkedBinarySearchTree<>(comparator, root);
+            return this;
         }else{
             return new LinkedBinarySearchTree<>(comparator, recurRem(key, root));
         }

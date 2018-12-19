@@ -21,7 +21,7 @@ public class Inorder {
         return array;
     }
 
-    public static <K,V> void stackLeft(LinkedBinarySearchTree<K,V> current,LinkedStack<LinkedBinarySearchTree<K,V>> stack) {
+     private static <K,V> void stackLeft(LinkedBinarySearchTree<K,V> current,LinkedStack<LinkedBinarySearchTree<K,V>> stack) {
         while(!current.isEmpty()){
             stack.push(current);
             current = current.left();
