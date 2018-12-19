@@ -1,4 +1,6 @@
 import org.junit.Test;
+
+import java.util.ArrayList;
 import java.util.Comparator;
 
 import static org.junit.Assert.*;
@@ -238,7 +240,8 @@ public class LinkedBinarySearchTreeTest {
         emptyTree2 = emptyTree2.put(59, 3);
 
         assertEquals(emptyTree1, emptyTree2);
-    }    @Test
+    }
+    @Test
     public void equalsDifferentType(){
         Comparator<Integer> comp = Comparator.naturalOrder();
         LinkedBinarySearchTree<Integer, Integer> tree = new LinkedBinarySearchTree<>(comp);
@@ -246,6 +249,27 @@ public class LinkedBinarySearchTreeTest {
 
         assertNotEquals(tree,integer);
     }
+    @Test
+    public void inorderTest(){ //TODO delete if useless
+        Comparator<Integer> comp = Comparator.naturalOrder();
+        LinkedBinarySearchTree<Integer, Integer> tree = new LinkedBinarySearchTree<>(comp);
+
+        tree = tree.put(1304,1);
+        tree = tree.put(23,2);
+        tree = tree.put(2005,3);
+        tree = tree.put(46,4);
+        tree = tree.put(15,5);
+        tree = tree.put(22,6);
+        tree = tree.put(1999,7);
+        tree = tree.put(2119,8);
+
+
+
+        ArrayList<Pair<Integer,Integer>> array = Inorder.toInorder(tree);
+        System.out.println(array.toString());
+    }
+
+
 }
 
 

@@ -63,6 +63,13 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
         }
     }
 
+    public boolean hasLeft(){
+        return !this.left().isEmpty();
+    }
+    public boolean hasRight(){
+        return !this.right().isEmpty();
+    }
+
     @Override
     public boolean containsKey(K key) {
         return key != null && searchKey(key, root) != null;
@@ -182,7 +189,7 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
         }
     }
 
-        @Override
+    @Override
     public String toString(){
         return recurString(root);
     }
