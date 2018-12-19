@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" line="82" />
+    <bookmark url="file://$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" line="84" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3ea1a5c-977b-4fef-add1-4336d598cbfb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Tests/LinkedBinaryTreeTest/InorderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinarySearchTree/Inorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree/Inorder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" afterDir="false" />
@@ -30,6 +31,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/LinkedBinaryTreeTest/LinkedBinarySearchTreeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="66" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/LinkedStackTest/LinkedStackTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
@@ -41,14 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/LinkedBinaryTreeTest/LinkedBinarySearchTreeTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tests/LinkedBinaryTreeTest/InorderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4480">
-              <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -71,26 +81,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="189">
+              <caret line="133" column="43" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#317#318#0" expanded="true" />
                 <element signature="e#344#345#0" expanded="true" />
-                <element signature="e#550#551#0" expanded="true" />
-                <element signature="e#1053#1054#0" expanded="true" />
-                <element signature="e#1091#1092#0" expanded="true" />
+                <element signature="e#795#796#0" expanded="true" />
+                <element signature="e#1954#1955#0" expanded="true" />
                 <element signature="e#1286#1287#0" expanded="true" />
                 <element signature="e#1321#1322#0" expanded="true" />
                 <element signature="e#2062#2063#0" expanded="true" />
                 <element signature="e#2128#2129#0" expanded="true" />
-                <element signature="e#4953#4954#0" expanded="true" />
-                <element signature="e#4993#4994#0" expanded="true" />
-                <element signature="e#5040#5041#0" expanded="true" />
-                <element signature="e#5081#5082#0" expanded="true" />
+                <element signature="e#5935#5936#0" expanded="true" />
+                <element signature="e#6025#6026#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/Inorder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="27" column="9" selection-start-line="23" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="34">
+              <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -123,9 +130,9 @@
       <find>== null</find>
       <find>!= null</find>
       <find>,</find>
-      <find>,</find>
       <find>compare</find>
       <find>equa</find>
+      <find>put</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -150,6 +157,7 @@
         <option value="$PROJECT_DIR$/src/Stack/LinkedStack.java" />
         <option value="$PROJECT_DIR$/src/BinarySearchTree/Inorder.java" />
         <option value="$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" />
+        <option value="$PROJECT_DIR$/Tests/LinkedBinaryTreeTest/InorderTest.java" />
       </list>
     </option>
   </component>
@@ -219,11 +227,11 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545238934578" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545252679908" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/Tests/LinkedStackTest" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/Tests/LinkedBinaryTreeTest" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -260,21 +268,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedBinarySearchTreeTest">
-    <configuration name="LinkedBinarySearchTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.InorderTest.iteratorTest">
+    <configuration name="InorderTest.iteratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PersistentTree" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LinkedBinarySearchTreeTest" />
+      <option name="MAIN_CLASS_NAME" value="InorderTest" />
+      <option name="METHOD_NAME" value="iteratorTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedBinarySearchTreeTest.containsKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedBinarySearchTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PersistentTree" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedBinarySearchTreeTest" />
-      <option name="METHOD_NAME" value="containsKey" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -309,11 +317,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InorderTest.iteratorTest" />
         <item itemvalue="JUnit.LinkedBinarySearchTreeTest" />
         <item itemvalue="JUnit.LinkedBinarySearchTreeTest.get" />
         <item itemvalue="JUnit.LinkedStackTest" />
         <item itemvalue="JUnit.LinkedStackTest.topEmpty" />
-        <item itemvalue="JUnit.LinkedBinarySearchTreeTest.containsKey" />
       </list>
     </recent_temporary>
   </component>
@@ -385,7 +393,7 @@
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49924242" weight="0.32659408" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32867134" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49772727" visible="true" weight="0.32503888" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49772727" visible="true" weight="0.1399689" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -431,6 +439,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/Inorder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Stack/LinkedStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/LinkedStackTest/LinkedStackTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -443,55 +472,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/LinkedBinaryTreeTest/LinkedBinarySearchTreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4480">
-          <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
+        <state relative-caret-position="153">
+          <caret line="9" column="66" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/Pair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stack/LinkedStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/Inorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="27" column="9" selection-start-line="23" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+        <state relative-caret-position="189">
+          <caret line="133" column="43" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#317#318#0" expanded="true" />
             <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#1053#1054#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#795#796#0" expanded="true" />
+            <element signature="e#1954#1955#0" expanded="true" />
             <element signature="e#1286#1287#0" expanded="true" />
             <element signature="e#1321#1322#0" expanded="true" />
             <element signature="e#2062#2063#0" expanded="true" />
             <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#4953#4954#0" expanded="true" />
-            <element signature="e#4993#4994#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5081#5082#0" expanded="true" />
+            <element signature="e#5935#5936#0" expanded="true" />
+            <element signature="e#6025#6026#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/LinkedBinaryTreeTest/InorderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
         </state>
       </provider>
     </entry>

@@ -26,7 +26,6 @@ public class Inorder {
             stack.push(current);
             current = current.left();
         }
-
     }
 
 }
