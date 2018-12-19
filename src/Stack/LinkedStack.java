@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public class LinkedStack<E> implements Stack<E> {
 
     private Node<E> top;
@@ -25,12 +27,20 @@ public class LinkedStack<E> implements Stack<E> {
 
     @Override
     public E top() {
-        return top.elem;
+        if (this.isEmpty()){
+            throw new NoSuchElementException();
+        }else{
+            return top.elem;
+        }
     }
 
     @Override
     public void pop() {
-        top = top.next;
+        if(this.isEmpty()){
+            throw new NoSuchElementException();
+        }else{
+            top = top.next;
+        }
     }
 
     @Override
