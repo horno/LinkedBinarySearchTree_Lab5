@@ -4,3 +4,4 @@
 	   al dibuix afegeix el 40, 20 i 90.
 
 	2* Demanar que equals sigui consistent amb el comparador per a LinkedBinarySearchTree.equals()
+	3* TODO tests task2
