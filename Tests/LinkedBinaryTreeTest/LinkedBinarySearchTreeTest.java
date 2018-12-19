@@ -254,22 +254,24 @@ public class LinkedBinarySearchTreeTest {
         Comparator<Integer> comp = Comparator.naturalOrder();
         LinkedBinarySearchTree<Integer, Integer> tree = new LinkedBinarySearchTree<>(comp);
 
-        tree = tree.put(1304,1);
-        tree = tree.put(23,2);
-        tree = tree.put(2005,3);
-        tree = tree.put(46,4);
-        tree = tree.put(15,5);
-        tree = tree.put(22,6);
-        tree = tree.put(1999,7);
-        tree = tree.put(2119,8);
-
-
+        tree = tree.put(200,1);
+        tree = tree.put(104,2);
+        tree = tree.put(48,3);
+        tree = tree.put(79,4);
+        tree = tree.put(215,5);
+        tree = tree.put(94,6);
+        tree = tree.put(14,7);
+        tree = tree.put(27,8);
+        tree = tree.put(38,8);
+        tree = tree.put(60,8);
+        tree = tree.put(206,8);
+        tree = tree.put(205,8);
+        tree = tree.put(204,8);
+        tree = tree.put(203,8);
 
         ArrayList<Pair<Integer,Integer>> array = Inorder.toInorder(tree);
         System.out.println(array.toString());
     }
-
-
 }
 
 

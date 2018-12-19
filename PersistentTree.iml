@@ -7,6 +7,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/BinarySearchTree" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Stack" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/LinkedStackTest" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/LinkedBinaryTreeTest" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

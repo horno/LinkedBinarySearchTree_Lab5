@@ -5,8 +5,7 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
 
     private final Node<K, V> root;
     private final Comparator<K> comparator;
-
-
+    
     private static class Node<K, V>{
         private final K key;
         private final V value;
@@ -61,13 +60,6 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
         }else{
             throw new NullPointerException();
         }
-    }
-
-    public boolean hasLeft(){
-        return !this.left().isEmpty();
-    }
-    public boolean hasRight(){
-        return !this.right().isEmpty();
     }
 
     @Override
@@ -189,8 +181,19 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
         }
     }
 
+
+    private void recurString2(Node<K, V> current, StringBuilder sb){ //TODO decide if string is global
+        if(current != null ){
+             recurString2(current.left,sb);
+             sb.append("[").append(current.key.toString()).append(", ").append(current.value.toString()).append("] ");
+             recurString2(current.right,sb);
+        }
+    }
+
     @Override
     public String toString(){
-        return recurString(root);
+        StringBuilder sb = new StringBuilder();
+        recurString2(root,sb);
+        return sb.toString();
     }
 }
