@@ -15,4 +15,9 @@ public class Pair<S,T> {
     public T second(){
         return this.second;
     }
+
+    @Override
+    public String toString(){
+        return "{"+first.toString()+","+second.toString()+"}";
+    }
 }

@@ -6,12 +6,16 @@ public class LinkedStack<E> implements Stack<E> {
 
         private E elem;
         private Node<E> next;
-        
+
         private Node(E elem, Node<E> next){
             this.elem = elem;
             this.next = next;
         }
 
+    }
+
+    public LinkedStack(){
+        top = null;     //header
     }
 
     @Override
