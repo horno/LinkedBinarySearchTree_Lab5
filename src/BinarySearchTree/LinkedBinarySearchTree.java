@@ -1,3 +1,5 @@
+//import javafx.util.Pair;
+
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -14,11 +16,11 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
     }
 
     private class LBSTIterator implements Iterator<Pair<K, V>> {
-        private LinkedStack<LinkedBinarySearchTree<K, V>> stack;
+        private LinkedStack<Node<K,V>> stack;
 
         private LBSTIterator(){
             stack = new LinkedStack<>();
-            stackLeft(LinkedBinarySearchTree.this);
+            stackLeft(LinkedBinarySearchTree.this.root);
         }
 
         @Override
@@ -30,19 +32,19 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
         public Pair<K, V> next() throws NoSuchElementException{
 
             if (!stack.isEmpty()) {
-                LinkedBinarySearchTree<K, V> current = stack.top();
+               Node<K,V> current = stack.top();
                 stack.pop();
-                stackLeft(current.right());
-                return current.root();
+                stackLeft(current.right);
+                return new Pair<>(current.key,current.value);
             }else{
                 throw new NoSuchElementException();
             }
         }
 
-        private void stackLeft(LinkedBinarySearchTree<K, V> current) { //TODO make stack a global variable in inorder?
-            while (!current.isEmpty()) {
+        private void stackLeft(Node<K, V> current) { //TODO make stack a global variable in inorder?
+            while (current != null) {
                 stack.push(current);
-                current = current.left();
+                current = current.left;
             }
         }
     }
@@ -154,15 +156,19 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
     public LinkedBinarySearchTree<K, V> remove(K key) {
         if (key == null) {
             throw new NullPointerException();
-        } else if (!containsKey(key)) {
-            return this;
-        } else {
-            return new LinkedBinarySearchTree<>(comparator, recurRem(key, root));
+        }else {
+            try {
+                return new LinkedBinarySearchTree<>(comparator, recurRem(key, root));
+            }catch (NoSuchElementException e){
+                return this;
+            }
         }
     }
 
     private Node<K, V> recurRem(K key, Node<K, V> current) {
-        if (comparator.compare(current.key, key) > 0) {
+        if(current == null){
+            throw new NoSuchElementException();
+        }else if (comparator.compare(current.key, key) > 0) {
             return new Node<>(current.key, current.value, recurRem(key, current.left), current.right);
         } else if (comparator.compare(current.key, key) < 0) {
             return new Node<>(current.key, current.value, current.left, recurRem(key, current.right));
