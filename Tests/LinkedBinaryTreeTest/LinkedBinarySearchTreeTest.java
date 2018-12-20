@@ -2,6 +2,8 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 import static org.junit.Assert.*;
 
@@ -250,27 +252,59 @@ public class LinkedBinarySearchTreeTest {
         assertNotEquals(tree,integer);
     }
     @Test
-    public void inorderTest(){ //TODO delete if useless
+    public void iteratorFullTreeTest(){
         Comparator<Integer> comp = Comparator.naturalOrder();
-        LinkedBinarySearchTree<Integer, Integer> tree = new LinkedBinarySearchTree<>(comp);
+        LinkedBinarySearchTree<Integer,Integer> tree = new LinkedBinarySearchTree<>(comp);
 
-        tree = tree.put(200,1);
-        tree = tree.put(104,2);
-        tree = tree.put(48,3);
-        tree = tree.put(79,4);
-        tree = tree.put(215,5);
-        tree = tree.put(94,6);
-        tree = tree.put(14,7);
-        tree = tree.put(27,8);
-        tree = tree.put(38,8);
-        tree = tree.put(60,8);
-        tree = tree.put(206,8);
-        tree = tree.put(205,8);
-        tree = tree.put(204,8);
-        tree = tree.put(203,8);
+        tree = tree.put(72,5);
+        tree = tree.put(28,3);
+        tree = tree.put(90,8);
 
-        ArrayList<Pair<Integer,Integer>> array = Inorder.toInorder(tree);
-        System.out.println(array.toString());
+        Iterator<Pair<Integer,Integer>> it = tree.iterator();
+        Pair<Integer,Integer> pair;
+
+        pair = it.next();
+
+        assertEquals((Integer)28,pair.first());
+        assertEquals((Integer)3,pair.second());
+
+        pair = it.next();
+
+        assertEquals((Integer)72,pair.first());
+        assertEquals((Integer)5,pair.second());
+
+        pair = it.next();
+
+        assertEquals((Integer)90,pair.first());
+        assertEquals((Integer)8,pair.second());
+    }
+
+    @Test
+    public void iteratorEmptyTest(){
+        Comparator<String> comp = Comparator.naturalOrder();
+        LinkedBinarySearchTree<String,String> tree = new LinkedBinarySearchTree<>(comp);
+        Iterator<Pair<String,String>> it = tree.iterator();
+
+        assertFalse(it.hasNext());
+    }
+
+    @Test
+    public void iteratorNotEmptyTest(){
+        Comparator<String> comp = Comparator.naturalOrder();
+        LinkedBinarySearchTree<String,String> tree = new LinkedBinarySearchTree<>(comp);
+        tree = tree.put("Foo","Bar");
+        Iterator<Pair<String,String>> it = tree.iterator();
+
+        assertTrue(it.hasNext());
+    }
+
+    @Test (expected = NoSuchElementException.class)
+    public void iteratorNoSuchElementTest(){
+        Comparator<String> comp = Comparator.naturalOrder();
+        LinkedBinarySearchTree<String,String> tree = new LinkedBinarySearchTree<>(comp);
+        Iterator<Pair<String,String>> it = tree.iterator();
+
+        it.next();
     }
 }
 
