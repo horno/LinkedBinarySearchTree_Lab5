@@ -18,13 +18,13 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
         private LinkedStack<LinkedBinarySearchTree<K, V>> stack;
 
         private LBSTIterator(){
-            stack = new LinkedStack();
+            stack = new LinkedStack<>();
             stackLeft(LinkedBinarySearchTree.this);
         }
 
         @Override
         public boolean hasNext() {
-            return stack.isEmpty();
+            return !stack.isEmpty();
         }
 
         @Override

@@ -3,7 +3,6 @@ import org.junit.Test;
 import java.util.Comparator;
 import java.util.Iterator;
 
-import static org.junit.Assert.*;
 
 public class InorderTest {
 
@@ -20,7 +19,8 @@ public class InorderTest {
 
         Iterator<Pair<Integer,Integer>> it = tree.iterator();
         Pair<Integer,Integer> integer;
-        if (it.hasNext()){
+
+        while (it.hasNext()){
             integer = it.next();
             System.out.println(integer.toString());
         }

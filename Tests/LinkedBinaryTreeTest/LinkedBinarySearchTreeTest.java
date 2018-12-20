@@ -11,8 +11,8 @@ public class LinkedBinarySearchTreeTest {
 
     @Test
     public void isEmpty() {
-        LinkedBinarySearchTree<Integer, Integer> emptyTree = new LinkedBinarySearchTree<>(comp);
 
+        LinkedBinarySearchTree<Integer, Integer> emptyTree = new LinkedBinarySearchTree<>(comp);
         assertTrue(emptyTree.isEmpty());
 
         emptyTree = emptyTree.put(20, 40);
