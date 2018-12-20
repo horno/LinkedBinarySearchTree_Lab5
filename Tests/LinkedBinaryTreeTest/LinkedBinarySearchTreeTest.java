@@ -298,6 +298,28 @@ public class LinkedBinarySearchTreeTest {
         assertTrue(it.hasNext());
     }
 
+    @Test
+    public void iteratorTest() {
+        Comparator<Integer> cmp = Comparator.naturalOrder();
+        LinkedBinarySearchTree<Integer,Integer> tree = new LinkedBinarySearchTree<>(cmp);
+        tree = tree.put(1,1);
+        tree = tree.put(3,3);
+        tree = tree.put(18,18);
+        tree = tree.put(21,21);
+        tree = tree.put(30,30);
+        tree = tree.put(2,2);
+
+        Iterator<Pair<Integer,Integer>> it = tree.iterator();
+        Pair<Integer,Integer> integer;
+        StringBuilder st = new StringBuilder();
+
+        while (it.hasNext()){
+            integer = it.next();
+            st.append(integer.toString());
+        }
+        assertEquals(st.toString(),"{1, 1}{2, 2}{3, 3}{18, 18}{21, 21}{30, 30}");
+    }
+
     @Test (expected = NoSuchElementException.class)
     public void iteratorNoSuchElementTest(){
         Comparator<String> comp = Comparator.naturalOrder();
@@ -305,6 +327,28 @@ public class LinkedBinarySearchTreeTest {
         Iterator<Pair<String,String>> it = tree.iterator();
 
         it.next();
+    }
+
+    @Test (expected = NullPointerException.class)
+    public void rootPairTestEmptyTree(){
+        Comparator<Integer> comp = Comparator.naturalOrder();
+        LinkedBinarySearchTree<Integer,Integer> tree = new LinkedBinarySearchTree<>(comp);
+
+        tree.root();
+    }
+    @Test(expected = NullPointerException.class)
+    public void emptyLeftTree(){
+        Comparator<Integer> comp = Comparator.naturalOrder();
+        LinkedBinarySearchTree<Integer,Integer> tree = new LinkedBinarySearchTree<>(comp);
+
+        tree.left();
+    }
+    @Test(expected = NullPointerException.class)
+    public void emptyRightTree(){
+        Comparator<Integer> comp = Comparator.naturalOrder();
+        LinkedBinarySearchTree<Integer,Integer> tree = new LinkedBinarySearchTree<>(comp);
+
+        tree.right();
     }
 }
 

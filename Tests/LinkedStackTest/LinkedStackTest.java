@@ -21,7 +21,31 @@ public class LinkedStackTest {
     }
 
     @Test
-    public void top() {
+    public void push() {
+        LinkedStack<String> stack = new LinkedStack<>();
+
+        assertTrue(stack.isEmpty());
+
+        stack.push("Foo");
+        stack.push("Bar");
+
+        assertFalse(stack.isEmpty());
+
+        assertEquals("Bar",stack.top());
+
+        stack.push("Eggplant");
+
+        assertEquals("Eggplant",stack.top());
+
+        stack.pop();
+        stack.pop();
+        stack.pop();
+
+        assertTrue(stack.isEmpty());
+    }
+
+    @Test
+    public void topNotEmpty() {
         LinkedStack<String> stack = new LinkedStack<>();
         stack.push("Foo");
 
@@ -51,27 +75,10 @@ public class LinkedStackTest {
         assertTrue(stack.isEmpty());
     }
 
-    @Test
-    public void push() {
+    @Test(expected = NoSuchElementException.class)
+    public void popEmpty() {
         LinkedStack<String> stack = new LinkedStack<>();
 
-        assertTrue(stack.isEmpty());
-
-        stack.push("Foo");
-        stack.push("Bar");
-
-        assertFalse(stack.isEmpty());
-
-        assertEquals("Bar",stack.top());
-
-        stack.push("Eggplant");
-
-        assertEquals("Eggplant",stack.top());
-
         stack.pop();
-        stack.pop();
-        stack.pop();
-
-        assertTrue(stack.isEmpty());
     }
 }
