@@ -7,6 +7,21 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
     private final Node<K, V> root;
     private final Comparator<K> comparator;
 
+    private static class Node<K, V> {
+
+        private final K key;
+        private final V value;
+        private final Node<K, V> left;
+        private final Node<K, V> right;
+
+        private Node(K key, V value, Node<K, V> left, Node<K, V> right) {
+            this.key = key;
+            this.value = value;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
     @Override
     public Iterator<Pair<K, V>> iterator() {
         return new LBSTIterator();
@@ -29,7 +44,7 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
         public Pair<K, V> next() throws NoSuchElementException{
 
             if (!stack.isEmpty()) {
-               Node<K,V> current = stack.top();
+                Node<K,V> current = stack.top();
                 stack.pop();
                 stackLeft(current.right);
                 return new Pair<>(current.key,current.value);
@@ -38,28 +53,12 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
             }
         }
 
-        private void stackLeft(Node<K, V> current) { //TODO make stack a global variable in inorder?
+        private void stackLeft(Node<K, V> current) {
             while (current != null) {
                 stack.push(current);
                 current = current.left;
             }
         }
-    }
-
-    private static class Node<K, V> {
-        private final K key;
-        private final V value;
-        private final Node<K, V> left;
-        private final Node<K, V> right;
-
-
-        private Node(K key, V value, Node<K, V> left, Node<K, V> right) {
-            this.key = key;
-            this.value = value;
-            this.left = left;
-            this.right = right;
-        }
-
     }
 
     public LinkedBinarySearchTree(Comparator<K> comparator) {
@@ -200,7 +199,7 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
     @Override
     public boolean equals(Object o) {
         if (o instanceof LinkedBinarySearchTree) {
-            LinkedBinarySearchTree<?, ?> tree = (LinkedBinarySearchTree<?, ?>) o; //TODO unchecked cast
+            LinkedBinarySearchTree<?, ?> tree = (LinkedBinarySearchTree<?, ?>) o;
             return equals(this.root, tree.root);
         }
         return false;

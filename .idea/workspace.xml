@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" line="82" />
+    <bookmark url="file://$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" line="81" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3ea1a5c-977b-4fef-add1-4336d598cbfb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,12 +36,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="289">
+              <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#709#710#0" expanded="true" />
                 <element signature="e#756#757#0" expanded="true" />
+                <element signature="e#1855#1856#0" expanded="true" />
+                <element signature="e#1893#1894#0" expanded="true" />
                 <element signature="e#5963#5964#0" expanded="true" />
                 <element signature="e#6003#6004#0" expanded="true" />
                 <element signature="e#6052#6053#0" expanded="true" />
@@ -51,18 +54,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/Pair.java">
+        <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/BinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding>
-                <element signature="e#221#222#0" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#428#429#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -131,6 +126,7 @@
         <option value="$PROJECT_DIR$/Tests/LinkedBinaryTreeTest/LinkedBinarySearchTreeTest.java" />
         <option value="$PROJECT_DIR$/Tests/LinkedBinaryTreeTest/PairTest.java" />
         <option value="$PROJECT_DIR$/src/BinarySearchTree/BinarySearchTree.java" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java" />
       </list>
     </option>
@@ -316,9 +312,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests_in_PersistentTree - 2018.12.20 at 16h 34m 25s.xml">
-      <configuration name="Tests in PersistentTree" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Tests_in_PersistentTree - 2018.12.20 at 16h 34m 59s.xml">
       <configuration name="Tests in PersistentTree" configurationId="JUnit" />
     </history-entry>
@@ -346,6 +339,9 @@
     <history-entry file="Tests_in_PersistentTree - 2018.12.20 at 21h 17m 27s.xml">
       <configuration name="Tests in PersistentTree" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Tests_in_PersistentTree - 2018.12.21 at 18h 02m 05s.xml">
+      <configuration name="Tests in PersistentTree" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,7 +367,7 @@
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49924242" weight="0.32659408" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32867134" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49772727" weight="0.2348367" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49772727" visible="true" weight="0.0466563" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -441,13 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/BinaryTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Stack/LinkedStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -477,21 +466,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/BinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+          <folding>
+            <element signature="e#5748#5749#0" expanded="true" />
+            <element signature="e#5784#5785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BinarySearchTree/LinkedBinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="289">
+          <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#709#710#0" expanded="true" />
             <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#1855#1856#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
             <element signature="e#5963#5964#0" expanded="true" />
             <element signature="e#6003#6004#0" expanded="true" />
             <element signature="e#6052#6053#0" expanded="true" />
