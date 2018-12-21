@@ -4,7 +4,6 @@ import java.util.NoSuchElementException;
 
 public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, BinaryTree<Pair<K, V>>, Iterable<Pair<K, V>> {
 
-
     private final Node<K, V> root;
     private final Comparator<K> comparator;
 
