@@ -137,7 +137,7 @@ public class LinkedBinarySearchTree<K, V> implements BinarySearchTree<K, V>, Bin
     }
 
     private Node<K, V> recurPut(K key, V value, Node<K, V> current) {
-        if (current == null) {        //Simple case
+        if (current == null) {
             return new Node<>(key, value, null, null);
         } else if (comparator.compare(current.key, key) > 0) {
             return new Node<>(current.key, current.value, recurPut(key, value, current.left), current.right);
